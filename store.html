@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Website</title>
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="store.css">
+ 
+</head>
+<body>
+  
+<!-- Navigation Bar -->
+<header class="navbar">
+  <div class="navbar-left">
+    <h1 class="logo">Blooming Mart</h1>
+  </div>
+  <div class="navbar-center">
+    <input type="text" class="search-input" placeholder="Search for Plants...">
+  </div>
+  <div class="navbar-right">
+    <a href="#" class="nav-icon" title="Wishlist">
+      <i class="fa-solid fa-heart"style="font-size: 25px;"></i>
+      <span id="wishlist-count">0</span>
+    </a>
+    <a href="#" class="nav-icon" title="Cart">
+      <i class="fa-solid fa-cart-shopping"style="font-size: 25px;"></i>
+      <span id="cart-count">0</span>
+    </a> 
+    
+  </div>
+</header>
+
+
+<!--navigation bar end-->
+ <!-- Fullscreen Image Section -->
+ <section class="hero">
+  <div class="hero-text">
+      <h1>Welcome to Our Store</h1>
+      <h2>Get flat 15% Discount on your first order</h2>
+  </div>
+</section>
+
+
+
+<div id="cart-popup" class="cart-popup">
+  <h3>Your Cart</h3>
+  <div id="cart-items" class="cart-grid"></div>
+  <p><strong>Total:</strong> ₹<span id="cart-total">0</span></p>
+
+  <!-- ✅ Proceed to Checkout Button -->
+   <a href="addtocart.html">
+  <button id="checkout-btn" class="checkout-button">Proceed to Checkout</a></button>
+</div>
+
+
+<!-- Wishlist Popup -->
+<div id="wishlist-popup" class="wishlist-popup">
+  <h3>Your Wishlist</h3>
+  <div id="wishlist-items" class="wishlist-grid"></div>
+</div>
+
+<!-- Feature Icons Section -->
+<section class="feature-icons">
+  <div class="feature-box">
+    <i class="fa-solid fa-leaf"style="font-size: 55px;"></i>
+    <h1>Eco-Friendly Plants</h1>
+  </div>
+  <div class="feature-box">
+    <i class="fa-solid fa-truck-fast"style="font-size: 55px;"></i>
+    <h2>Fast Delivery</h1>
+  </div>
+  <div class="feature-box">
+    <i class="fa-solid fa-star"style="font-size: 55px;"></i>
+    <h1>Top Quality</h1>
+  </div>
+</section>
+
+
+   <!-- Product Listing Section -->
+   <section class="product-listing">
+    <div class="product-card">
+      <img src="img/avocado plant.jpg" alt="Product 1">
+      <h3>Avocado plant</h3>
+      <p>₹250</p>
+       <!-- Order Form -->
+    <form action="order.php" method="POST">
+      <input type="text" name="customer_name" placeholder="Enter your name" required>
+      <input type="hidden" name="product_name" value="Avocado plant">
+      <input type="hidden" name="product_price" value="250">
+      <input type="number" name="quantity" value="1" min="1" required>
+      <button type="submit">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+  </form>
+</div>
+    <div class="product-card">
+      <img src="img/grape plant.jpg" alt="Product 2">
+      <h3>Grapes plant</h3>
+      <p>₹150</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/marigold plant.jpg" alt="Product 3">
+      <h3>Marigold plant</h3>
+      <p>₹180</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/guava plant.jpg" alt="Product 4">
+      <h3>Guava plant</h3>
+      <p>₹190</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+
+
+
+     <!-- More Products -->
+    <div class="product-card">
+      <img src="img/orange plant.jpg" alt="Product 5">
+      <h3>Orange plant</h3>
+      <p>₹200</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/chilli plant.jpg" alt="Product 6">
+      <h3>Chilli plant</h3>
+      <p>₹220</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/amla plant.jpg" alt="Product 7">
+      <h3>Amla plant</h3>
+      <p>₹210</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/frangipani plant.jpg" alt="Product 8">
+      <h3>frangipani plant</h3>
+      <p>₹160</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/jasmine plant.jpg" alt="Product 5">
+      <h3>Jasmine plant</h3>
+      <p>₹170</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/mango plant.jpg" alt="Product 6">
+      <h3>Mango plant</h3>
+      <p>₹180</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/brinjal plant.jpg" alt="Product 7">
+      <h3>Brinjal plant</h3>
+      <p>₹80</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/rose plant.jpg" alt="Product 8">
+      <h3>Rose plant</h3>
+      <p>₹100</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+
+
+    <div class="product-card">
+      <img src="img/banana plant.jpg" alt="Product 5">
+      <h3>Banana plant</h3>
+      <p>₹120</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/bittergourd plant.jpg" alt="Product 6">
+      <h3>Bittergourd plant</h3>
+      <p>₹80</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/cherry plant.jpg" alt="Product 7">
+      <h3>Cherry plant</h3>
+      <p>₹160</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/lotus plant.jpg" alt="Product 8">
+      <h3>Lotus plant</h3>
+      <p>₹140</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/Hibiscus plant.jpg" alt="Product 5">
+      <h3>Hibiscus plant</h3>
+      <p>₹60</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/tomato plant.jpg" alt="Product 6">
+      <h3>Tomato plant</h3>
+      <p>₹55</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/pineapple.jpg" alt="Product 7">
+      <h3>Pineapple plant</h3>
+      <p>₹200</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/beans plant.jpg" alt="Product 8">
+      <h3>Beans plant</h3>
+      <p>₹95</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/chrysanthemum plant.jpg" alt="Product 5">
+      <h3>chrysanthemum plant</h3>
+      <p>₹160</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/coconut plant.jpg" alt="Product 6">
+      <h3>Coconut plant</h3>
+      <p>₹120</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/ridgegourd plant.jpg" alt="Product 7">
+      <h3>Ridgegourd plant</h3>
+      <p>₹85</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/bottlegourd plant.jpg" alt="Product 8">
+      <h3>Bottlegourd plant</h3>
+      <p>₹65</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/crossandra.jpg" alt="Product 5">
+      <h3>crossandra plant</h3>
+      <p>₹130</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/sapota plant.jpg" alt="Product 6">
+      <h3>Sapota plant</h3>
+      <p>₹150</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/tulip plant.jpg" alt="Product 7">
+      <h3>Tulip plant</h3>
+      <p>₹173</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+    <div class="product-card">
+      <img src="img/custardapple plant.jpg" alt="Product 8">
+      <h3>custardapple plant</h3>
+      <p>₹135</p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist">Add to Wishlist</button>
+    </div>
+
+
+  </section>
+
+  <script src="scrip.js"></script>
+</body>
+</html>
